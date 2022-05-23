@@ -15,7 +15,6 @@ export function App() {
   const [imageName, setImageName] = useState('');
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState(null);
   const [page, setPage] = useState(1);
   const [showModal, setShowModal] = useState(false);
   const [largeImg, setLargeImg] = useState(null);
@@ -57,7 +56,6 @@ export function App() {
 
   const fetchError = (error) => { 
     setImages([]);
-    setError(error);
     toast.error(error.message);
   }
 
